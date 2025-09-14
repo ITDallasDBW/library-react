@@ -16,6 +16,7 @@ const Nav = ({ numberOfItems }) => {
       <div className="nav__container">
         <Link to="/">
           <img src={LibraryLogo} alt="" className="logo" />
+          
         </Link>
         <ul className="nav__links">
           <li className="nav__list">
@@ -61,9 +62,11 @@ const Nav = ({ numberOfItems }) => {
               </Link>
             </li>
           </ul>
-        </div>
+        </div>.
       </div>
+      
     </nav>
+    
   );
 };
 
