@@ -62,7 +62,7 @@ const Nav = ({ numberOfItems }) => {
               </Link>
             </li>
           </ul>
-        </div>.
+        </div>
       </div>
       
     </nav>
