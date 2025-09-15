@@ -12,10 +12,6 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
   const [cart, setCart] = useState([]);
 
-
-
-
-
   function addToCart(book) {
     setCart([...cart, { ...book, quantity: 1 }]);
   }
