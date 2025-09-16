@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function ScrollToTop() {
-    const location =useLocation();
-    console.log('ScrollToTop')
+  const { pathname } = useLocation();
 
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }, [location.pathname]);
-    return null;
+  useEffect(() => {
+    // Use requestAnimationFrame to ensure scroll happens after render
+    const scrollToTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    const id = requestAnimationFrame(scrollToTop);
+    return () => cancelAnimationFrame(id);
+  }, [pathname]);
+
+  return null;
 }
+
 export default ScrollToTop;

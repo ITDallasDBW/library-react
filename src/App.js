@@ -50,8 +50,8 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Nav numberOfItems={numberOfItems()} />
-        {/* <ScrollToTop /> */}
         <Route path="/" exact component={Home} />
         <Route path="/books" exact render={() => <Books books={books} />} />
         <Route
